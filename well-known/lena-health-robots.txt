@@ -1,0 +1,94 @@
+# Robots.txt for Lena Health
+# https://lena.io
+
+User-agent: *
+Allow: /
+Disallow: /notice-7f3a2b9c
+
+# Block AI training and assistant crawlers from /notice-7f3a2b9c
+User-agent: GPTBot
+Disallow: /notice-7f3a2b9c
+
+User-agent: ChatGPT-User
+Disallow: /notice-7f3a2b9c
+
+User-agent: OAI-SearchBot
+Disallow: /notice-7f3a2b9c
+
+User-agent: ClaudeBot
+Disallow: /notice-7f3a2b9c
+
+User-agent: Claude-Web
+Disallow: /notice-7f3a2b9c
+
+User-agent: anthropic-ai
+Disallow: /notice-7f3a2b9c
+
+User-agent: PerplexityBot
+Disallow: /notice-7f3a2b9c
+
+User-agent: Perplexity-User
+Disallow: /notice-7f3a2b9c
+
+User-agent: Google-Extended
+Disallow: /notice-7f3a2b9c
+
+User-agent: Googlebot
+Disallow: /notice-7f3a2b9c
+
+User-agent: Googlebot-News
+Disallow: /notice-7f3a2b9c
+
+User-agent: Bingbot
+Disallow: /notice-7f3a2b9c
+
+User-agent: Applebot
+Disallow: /notice-7f3a2b9c
+
+User-agent: Applebot-Extended
+Disallow: /notice-7f3a2b9c
+
+User-agent: Meta-ExternalAgent
+Disallow: /notice-7f3a2b9c
+
+User-agent: Meta-ExternalFetcher
+Disallow: /notice-7f3a2b9c
+
+User-agent: FacebookBot
+Disallow: /notice-7f3a2b9c
+
+User-agent: facebookexternalhit
+Disallow: /notice-7f3a2b9c
+
+User-agent: Bytespider
+Disallow: /notice-7f3a2b9c
+
+User-agent: Amazonbot
+Disallow: /notice-7f3a2b9c
+
+User-agent: cohere-ai
+Disallow: /notice-7f3a2b9c
+
+User-agent: cohere-training-data-crawler
+Disallow: /notice-7f3a2b9c
+
+User-agent: CCBot
+Disallow: /notice-7f3a2b9c
+
+User-agent: Diffbot
+Disallow: /notice-7f3a2b9c
+
+User-agent: YouBot
+Disallow: /notice-7f3a2b9c
+
+User-agent: Twitterbot
+Disallow: /notice-7f3a2b9c
+
+User-agent: LinkedInBot
+Disallow: /notice-7f3a2b9c
+
+# Sitemap location
+Sitemap: https://lena.io/sitemap.xml
+
+# LLMs.txt for AI assistants
+# See: https://lena.io/llms.txt

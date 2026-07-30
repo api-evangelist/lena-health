@@ -1,0 +1,47 @@
+generated: '2026-07-19'
+method: probed
+host: https://lena.io
+notes: >-
+  lena.io is a single-page app whose server returns the 8,057-byte index.html for
+  every unresolved path with HTTP 200. Every /.well-known/ probe therefore returns
+  200 with HTML rather than the requested document — these are soft-404s, not real
+  discovery documents, and are recorded below as present=false. No genuine
+  /.well-known/ document was found, so no WellKnown or SecurityTxt pointer is wired
+  into apis.yml. The root-level discovery documents (llms.txt, robots.txt,
+  sitemap.xml) are real and are saved verbatim.
+documents:
+- path: /llms.txt
+  status: 200
+  present: true
+  bytes: 2663
+  file: ../llms/lena-health-llms.txt
+- path: /robots.txt
+  status: 200
+  present: true
+  bytes: 1712
+  file: lena-health-robots.txt
+- path: /sitemap.xml
+  status: 200
+  present: true
+  bytes: 1199
+  file: lena-health-sitemap.xml
+- path: /.well-known/security.txt
+  status: 200
+  present: false
+  reason: SPA fallback returned index.html (soft-404)
+- path: /.well-known/openid-configuration
+  status: 200
+  present: false
+  reason: SPA fallback returned index.html (soft-404)
+- path: /.well-known/oauth-authorization-server
+  status: 200
+  present: false
+  reason: SPA fallback returned index.html (soft-404)
+- path: /.well-known/api-catalog
+  status: 200
+  present: false
+  reason: SPA fallback returned index.html (soft-404)
+- path: /.well-known/ai-plugin.json
+  status: 200
+  present: false
+  reason: SPA fallback returned index.html (soft-404)

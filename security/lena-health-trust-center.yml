@@ -1,0 +1,34 @@
+generated: '2026-07-19'
+method: searched
+probe: true
+source: https://lena.io/llms.txt
+url: https://trust.lenaconnect.com/
+certifications:
+- SOC 2 Type II
+- HIPAA
+notes: >-
+  The trust center is hosted off the primary marketing domain at
+  trust.lenaconnect.com and is client-side rendered, so no certification names are
+  present in its server-returned HTML (HTTP 200, 4,239 bytes, JS shell). The
+  certification names recorded here are taken verbatim from Lena Health's own
+  first-party sources on lena.io, which also publish the trust center URL. Note
+  that lena.io is a single-page app that returns its index.html for every unknown
+  path, so an automated probe of https://lena.io/trust returns HTTP 200 with the
+  homepage; that soft-404 is not a real trust-center page and has been corrected
+  here.
+evidence:
+- source: https://lena.io/llms.txt
+  kind: llms.txt
+  quote: 'Compliance & Security: HIPAA Compliant; SOC 2 Type II Certified; Trust Center:
+    https://trust.lenaconnect.com/'
+- source: https://lena.io/
+  kind: meta-description
+  quote: SOC 2 Type II and HIPAA compliant.
+- source: https://lena.io/
+  kind: schema.org FAQPage
+  quote: Yes, Lena Health is both HIPAA compliant and SOC 2 Type II certified, ensuring
+    the highest standards of data security and privacy for healthcare organizations.
+- source: https://trust.lenaconnect.com/
+  kind: trust-center
+  status: 200
+  title: Lena Health Trust Center
