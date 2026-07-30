@@ -1,7 +1,21 @@
 aid: lena-health
 name: Lena Health
-description: Lena Health is a company surfaced as a portfolio company of techstars and added to the API
-  Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: 'Lena Health is a Houston, Texas healthcare technology company founded
+  in the Texas Medical Center that combines AI agents with human care navigators to
+  deliver care coordination at scale. Its LenaConnect platform handles routine patient
+  outreach calls, appointment scheduling and coordination, payer and provider hold
+  times, automatic call documentation, EHR integration, and resource and referral
+  management, so human navigators can focus on building trust with patients. Lena
+  offers fully managed care navigation services covering Chronic Care Management (CCM),
+  Transitional Care Management (TCM), rising-risk care management, and annual wellness
+  visits, and works with health plans, accountable care organizations (ACOs), health
+  systems, provider groups, care management providers, and community organizations.
+  The company reports retrospective matched-cohort results of 29% fewer unplanned
+  readmissions, 42% fewer ED visits, and $3,116 saved per patient within 180 days.
+  Lena Health is HIPAA compliant and SOC 2 Type II certified, and publishes a trust
+  center. Lena Health is a Techstars portfolio company. No public API, developer portal,
+  or machine-readable API specification was found during enrichment; the platform is
+  delivered as a managed service with EHR integration handled through engagements.'
 url: https://raw.githubusercontent.com/api-evangelist/lena-health/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -9,11 +23,32 @@ x-backed-by:
 - techstars
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://lena.io/og/og-card.png
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
+- Healthcare
+- Health Care Coordination
+- Care Navigation
+- Artificial Intelligence
+- Patient Engagement
+- Chronic Care Management
+- Health Plans
+- Digital Health
+- HIPAA
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -21,5 +56,30 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: TrustCenter
+  url: security/lena-health-trust-center.yml
 - type: Website
   url: https://lena.io/
+- type: About
+  url: https://lena.io/about
+- type: Login
+  url: https://lenaconnect.com/auth/login
+- type: Support
+  url: https://lena.io/contact
+- type: TermsOfService
+  url: https://lena.io/terms
+- type: PrivacyPolicy
+  url: https://lena.io/privacy
+- type: Compliance
+  url: https://trust.lenaconnect.com/
+- type: LLMsTxt
+  url: llms/lena-health-llms.txt
+- type: Conformance
+  url: conformance/lena-health-conformance.yml
+- type: DomainSecurity
+  url: security/lena-health-domain-security.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
