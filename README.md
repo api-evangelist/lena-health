@@ -64,34 +64,85 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Lena Health is a Houston, Texas healthcare technology company founded in the Texas Medical Center that combines AI agents with human care navigators to deliver care coordination at scale. Its LenaConnect platform handles routine patient outreach calls, appointment scheduling and coordination, payer and provider hold times, automatic call documentation, EHR integration, and resource and referral management.
+Lena Health is a Houston, Texas healthcare technology company founded in the Texas Medical Center that combines AI agents with human care navigators to deliver care coordination at scale. Its LenaConnect platform handles routine patient outreach calls, appointment scheduling and coordination, payer and provider hold times, automatic call documentation, EHR integration, and resource and referral management, so human navigators can focus on building trust with patients. Lena offers fully managed care navigation services covering Chronic Care Management (CCM), Transitional Care Management (TCM), rising-risk care management, and annual wellness visits, and works with health plans, accountable care organizations (ACOs), health systems, provider groups, care management providers, and community organizations. The company reports retrospective matched-cohort results of 29% fewer unplanned readmissions, 42% fewer ED visits, and $3,116 saved per patient within 180 days. Lena Health is HIPAA compliant and SOC 2 Type II certified, and publishes a trust center. Lena Health is a Techstars portfolio company. No public API, developer portal, or machine-readable API specification was found during enrichment; the platform is delivered as a managed service with EHR integration handled through engagements.
 
-Lena offers fully managed care navigation services covering Chronic Care Management (CCM), Transitional Care Management (TCM), rising-risk care management, and annual wellness visits, working with health plans, ACOs, health systems, provider groups, care management providers, and community organizations.
+**Areas:** Company · Healthcare · Health Care Coordination · Care Navigation · Artificial Intelligence · Patient Engagement · Chronic Care Management · Health Plans · Digital Health · HIPAA
 
-Backed by: techstars — https://lena.io/
+## Lena Health on APIs.io
 
-## API surface
+Everything profiled for Lena Health is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/lena-health/](https://apis.io/providers/lena-health/)** — or go straight to one of the APIs or properties below.
 
-**No public API.** Enrichment found no developer portal, API documentation, OpenAPI/AsyncAPI specification, SDKs, or public API host. `api.lena.io`, `docs.lena.io`, `developer.lena.io`, `api.lenaconnect.com`, and `app.lenaconnect.com` do not resolve. The platform is delivered as a managed service, with EHR integration handled through customer engagements rather than a self-serve API.
+### Published properties
 
-Because there is no specification to ground them in, the spec-dependent artifacts (openapi, mcp, skills, overlays, errors, scopes, authentication, conventions, data-model, sandbox, cli, components, asyncapi, agentic-access) are intentionally absent rather than fabricated.
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## Artifacts
+#### Security (2)
 
-| Artifact | File | Method |
-|---|---|---|
-| llms.txt | `llms/lena-health-llms.txt` | searched (verbatim from https://lena.io/llms.txt) |
-| Well-known index | `well-known/lena-health-well-known.yml` | probed |
-| robots.txt | `well-known/lena-health-robots.txt` | searched (verbatim) |
-| sitemap.xml | `well-known/lena-health-sitemap.xml` | searched (verbatim) |
-| Trust center | `security/lena-health-trust-center.yml` | searched |
-| Domain security | `security/lena-health-domain-security.yml` | probed |
-| Conformance | `conformance/lena-health-conformance.yml` | searched |
+Authentication, trust centre, and vulnerability disclosure.
 
-## Notes
+- [Lena Health Domain Security](https://apis.io/security/lena-health/lena-health-domain-security/)
+- [Lena Health Trust Center](https://apis.io/security/lena-health/lena-health-trust-center/)
 
-- **Compliance:** HIPAA compliant and SOC 2 Type II certified; trust center at https://trust.lenaconnect.com/ (hosted off the marketing domain, client-side rendered).
-- **SPA soft-404 trap:** `lena.io` returns its 8,057-byte `index.html` with HTTP 200 for every unresolved path. Automated probes of `/.well-known/*` and `/trust` therefore appear to succeed but return HTML. Treat any 200 from this host as unverified until the body is inspected.
-- **No vulnerability disclosure program** was found — no `security.txt`, disclosure page, or bug bounty — so no `Security` pointer is wired.
-- **AI-crawler policy:** `robots.txt` allows all crawlers site-wide and blocks roughly 25 named AI/search agents (GPTBot, ClaudeBot, PerplexityBot, Google-Extended, CCBot, …) from a single obscure path, `/notice-7f3a2b9c`.
-- **Domain security:** TLS 1.3 with HSTS (max-age 63072000), but no DNSSEC, no CAA records, no SPF, and DMARC at `p=none`.
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://lena.io/)
+- [Support](https://lena.io/contact)
+- [Blog](https://lena.io/blog/)
+- [Compliance](https://trust.lenaconnect.com/)
+- [Terms of service](https://lena.io/terms)
+- [Privacy policy](https://lena.io/privacy)
+
+## API Evangelist rating
+
+**Kin Score 17.7** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 55.4 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 2.4 |
+| Access clarity | 43.4 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 17.6** — Health
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/lena-health/](https://apis.io/providers/lena-health/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Lena Health: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/lena-health/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
